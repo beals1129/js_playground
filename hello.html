@@ -7,10 +7,14 @@
 </head>
 <body>
 
-    <h1>JS Playground</h1>
+    <h1>자바스크립트 연습장</h1>
+    <p id="demo">몇 시인가요?</p>
 
     <script>
-        console.log("Hello world");
+        let demo =  document.getElementById('demo');
+        demo.innerHTML = Date();
+
+        
     </script>
     
 </body>
