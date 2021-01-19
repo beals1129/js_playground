@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>loop pratice</h1>
+
+    <script>
+        //while 문
+        // var n = 1;
+        // var sum = 0;
+
+        // while (n <= 100) {
+        //     sum = sum+n;
+
+            
+        //     console.log(n, sum);
+            
+        //     n++;
+
+        // }
+
+        // document.write('1부터 100까지의 합은'+sum+'입니다')
+
+
+        //for 문
+        // var sum = 0;
+        // for(n= 1; n<=100; n++){
+        //     sum = sum+n;
+        //     console.log(n, sum);
+        // }
+        // document.write('1부터 100까지의 합은'+sum+'입니다')
+
+
+
+        //짝수의 합 계산
+        // var sum = 0;
+        // for(n= 1; n<=100; n++){
+
+        //     if (n % 2 == 0 ){
+        //         sum = sum+n;
+        //     }
+            
+        //     console.log(n, sum);
+        // }
+        // document.write('1부터 100까지의 짝수의 합은'+sum+'입니다')
+
+
+
+        // 입력받은 갯수와의 합
+
+        // var num = Number(prompt("Input number"));
+        // var sum = 0;
+
+        // for(n= 1; n<=num; n++){
+        //     sum = sum+n;
+        //     console.log(n, sum);
+        // }
+        // document.write('1부터'+ num + '까지의 합은'+sum+'입니다')
+
+
+        
+        // 소수 판별 프로그램
+
+        var n = Number(prompt("Input number"));
+        var isPrime = true;
+
+        for (var i = 2; i< n; i++ ){
+            if (n % i === 0 ){
+               
+                isPrime = false;
+             
+                break;
+            }   console.log(isPrime,i);
+        }
+
+        if (isPrime) {
+            document.write(n+"은 소수입니다.");
+        } else {
+            document.write(n+"은 소수가 아닙니다.");
+        }
+
+    </script>
+    
+</body>
+</html>
