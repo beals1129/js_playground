@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function repeat(text, num){
+        //     for (i =0; i< num; i++){
+        //         console.log(text);
+        //     }
+           
+        // }
+
+        // repeat("hello" , 4);
+
+        // //return 은 변수에 값을 넣을 때 사용한다.
+
+        // var five = function(){
+        //     return 5;
+        // } // five() 는 5가된다. 
+
+        // var x = five(); // x 는 5가된다.
+
+
+        // return return은 함수를 빠져나갈 때 사용한다. 
+
+         var foo =function(){
+             for(var i = 0; i< 10; i++){
+                for(var j = 0; j<10; j++){
+                      console.log(i,j);
+                    if ( i === 5 && j === 3) { //둘다 참일때
+                        return;
+                    }
+                }
+            }
+        };
+        foo();
+
+
+
+    </script>
+</body>
+</html>
