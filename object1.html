@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var p1 = {};
+
+        p1.name ="heekyung";
+        p1.weight = 100;
+
+        console.log(p1.name);
+
+        p1.eat = function(food) {
+            console.log(this.name+"은 "+food+"을 먹어서 " +this.weight+"kg이 되었습니다.");
+            this.weight += 10;
+            
+        };
+        p1.eat("삼겹살");
+        console.log(p1.weight);
+
+        p1.eat("치킨");
+        console.log(p1.weight);
+
+        p1.eat("피자");
+        console.log(p1.weight);
+
+        
+        //JSON 표기법으로 객체 만들기
+        var m1 = {"name" : "heekyung", 
+        "hp" : 100, "power" : 20, 
+        "attact" : function(target) { 
+            target.hp -= this.power; 
+            console.log(this.name+"의 hp를 " + this.power + "만큼 깎았습니다. 현재 남은 hp = " + this.hp);}
+        }
+
+        m1.attact(m1);
+      
+
+    </script>
+</body>
+</html>
