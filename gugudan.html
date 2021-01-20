@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gugudan1</title>
+</head>
+<body>
+    <h1>구구단 출력하기</h1>
+    <p>출력할 단수 =</p><input type="number" id="gugudanNum" >
+    <button onclick="runGugudan()"> ok </button>
+
+
+    <script>
+
+        //구구단 2단 
+        // for ( i = 1; i<10 ; i++){
+        //     console.log( 2 + "*" + i +"=" + 2 * i);
+        // }
+
+
+        //구구단 n 단
+        // var n = Number(prompt("숫자를 입력해주세요"));
+
+
+
+        // 값을 input으로 받아오기
+        function runGugudan() {
+            var num =  document.getElementById("gugudanNum").value;
+            var n = Number(num);
+            var i = 0;
+
+                for ( i = 1; i<10 ; i++){
+                console.log( n + "*" + i +"=" + n * i);
+            }
+        }
+
+            // while(i<10) {
+            //     console.log( n +"*"+ i + "=" + n * i);
+            //     i++;
+            // }
+
+    </script>
+</body>
+</html>
