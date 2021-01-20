@@ -1,0 +1,57 @@
+diff a/object_test.html b/object_test.html	(rejected hunks)
+@@ -0,0 +1,54 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Document</title>
++</head>
++<body>
++    <h2>객체 연습문제</h2>
++
++    <script>
++        var numbers = { "all" : [] , "prime" : [], 
++         "isPrime": function(number) {
++            for( i = 2 ; i < number ; i++){
++                if ( number % i === 0 ) {
++                    return false;
++                }
++            }
++            return true;
++        }
++        // 소수인지 확인하는 소스를 만들어보고
++        //몇개의 소수가있는지 찾아보는 코딩을 짜보기.
++             
++        , 
++        "addAllprimes" : function(max_num) {
++          for (i=2; i<= max_num; i++){
++              this.all.push(i);
++          }
++            
++        } ,
++        "calcPrimes" : function() {
++            for(i =0; i< this.all.length; i++){
++                var n = this.all[i];
++                if (this.isPrime(n)){
++                    this.prime.push(n);
++                }
++            }
++        },
++        "getAllPrimeNumbers" : function() {
++            var ret = "";
++            ret += "<h3>전체 소수의 갯수 : " + this.prime.length + "</h3>/n";
++            for(i = 0; i<this.prime.length; i++){
++
++            }  
++        }
++     };
++
++     numbers.getAllprimes(20);
++
++
++     //https://github.com/honux77/js-playground/blob/master/week2/prime2.html 하드하다..
++    </script>
++</body>
++</html>
+\ No newline at end of file
