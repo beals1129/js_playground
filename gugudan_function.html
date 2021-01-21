@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> 함수로 만드는 구구단 </h2>
+
+    <script>
+        // function gugudan(num) {
+        //     document.write("<h3>" + num +"단 </h2>")
+        //     for ( i = 2; i <= 9; i++){
+                
+        //         var str = "";
+
+        //         str += num;
+        //         str += "X";
+        //         str += i;
+        //         str += "=";
+        //         str += num*i;
+        //         str += "<br>"
+
+        //         document.write(str);
+        //     }
+        // }
+        // gugudan(4);
+
+        function cacluGugu(x){
+            var ret = [];
+            for (var i = 1; i <= 9; i++){
+                ret[i] = x * i ;  
+            }
+            return ret;
+        }
+
+        function printResult( num , guguResult){
+            console.log(num);
+            document.write("<h3>" + num +"단 </h2>");
+            
+            for ( i = 1; i <= 9; i++){
+                document.write( num + " X " + i + " = "+  num * i + "</br>")
+
+            }
+            
+          
+        }
+
+        function mainGugudan() {
+            var dan = 2;
+            for (dan = 2; dan <= 9; dan++){
+                var result = cacluGugu(dan);
+                printResult( dan, result);
+                
+            }
+
+        }
+
+        mainGugudan();
+    </script>
+
+    
+</body>
+</html>
