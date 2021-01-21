@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> 배열로 만드는 구구단 </h2>
+    <script>
+        var results = [];
+        var length = 9;
+        // var num = 3;
+
+        for (num = 2 ; num <= length; num++){
+
+            document.write("<h3>" + num +"단 </h2>")
+
+            for (i = 1; i <= length; i++){
+                results.push(num * i);
+                
+                var str = "";
+
+                str += num;
+                str += "X";
+                str += i;
+                str += "=";
+                str += num*i;
+                str += "<br>"
+
+                document.write(str);
+                console.log (results);
+            }
+        }
+        // for ( i = 1; i <= length; i++) {
+
+        // }
+    </script>
+</body>
+</html>
