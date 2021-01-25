@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //원본이 바뀌는 경우는 스트링(문자열)은 바꿀 수 없다 . ( 이뮤터블 )
+
+        //concat
+        var a = [ 1, 2, 3, 4, 5];
+        var s = "hello";
+
+        //배열
+
+        a.concat(6);
+        //concat 는 합치다는 뜻
+        var a2 = a.concat(6);
+        //기존의 배열에 덧붙여서 새로운 배열을 만들 수 있음
+        //기존의 배열은 변하지 않는다!
+
+        var a3 = a2.concat([7,8,9]);
+
+        console.log(a);
+        console.log(a2);
+        console.log(a3);
+
+
+        //문자열 
+
+        var s2 = s.concat(" world");
+
+        console.log(s);
+        console.log(s2);
+
+        //join 
+        //배열을 문자열로 변환해주는 것 
+      
+        var s3 = a.join(); // ,을 구분자로 문자열변환
+        console.log(s3); //배열의 원소들을 문자열로 만들어준다. 
+
+        var s4 = a.join(""); // , 없이 원소 그대로 합쳐서 문자열 변환
+        console.log(s4);
+
+        var s5 = a.join("---");
+        console.log(s5); // 결과 1---2---3---4---5
+
+        // indexOf 어느 위치에 있는지 찾아내기
+
+        a.push(2);
+        a.push(3);
+        console.log(a);
+        console.log(a.indexOf(2)); //여기서 괄호는 번호가 아니라 그 숫자의 번호 (배열 번호)를 찾아줌
+        // > 1 번에 들어있다.
+        console.log(a.lastIndexOf(2)); // 뒤에서부터 찾아줌
+        // > 5 번에 들어있다.
+
+        console.log(a.indexOf(100)); // 없는 문자를 찾았을경우
+        // -1 이 나옴 
+        if ( a.indexOf(100) === -1) {
+            console.log('100이 없습니다.')
+        }
+
+        // slice 잘라내기
+
+        a.slice(0,3); // 뒤에있는 번호의 자리는 포함하지 않는다. 
+        // 1 2 3
+
+        //숫자열
+        var a3 = a.slice(2,5);
+        console.log(a3);
+        // > 3 4 5
+
+        //문자열
+        var s6 = s.slice(2,5);
+        console.log(s6);
+        // > llo
+
+
+        //splice 원본 배열을 건드리면서 자르기!!!!!!! 
+
+        console.log(a);
+        var a4 = a.splice(5,2) // > 2 ,3
+        console.log(a4); //5번째부터 2번 자르기
+        console.log(a); //잘라내짐 > 원본이 바뀜 
+
+
+
+
+        //split
+        // 문자열을 배열로 쪼개주는 것 
+
+        var ss = "hello, world, a-b-c";
+        var ss2 = ss.split("");
+        var ss3 = ss.split(" "); //공백을 기준으로 쪼개기 (공백사라짐)
+        var ss4 = ss.split("-"); // -를 기준으로 쪼개기 (-사라짐)
+        var ss5 = ss.split("ll"); //문자열을 기준으로 쪼개기 (문자열 사라짐)
+
+        console.log(ss);
+        console.log(ss2);
+        console.log(ss3);
+        console.log(ss4);
+        console.log(ss5);
+        console.log(ss2.join("")); //다시 합치기 "" 는 원래대로 돌리는 것
+        console.log(ss3.join(" ")); //쪼갠 그대로 합쳐주면 원래대로 돌아옴
+        console.log(ss4.join("-"));
+        console.log(ss5.join("ll"));
+    
+    </script>
+
+</body>
+</html>
