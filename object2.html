@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체 생성자로 쉽게 객체만들기 함수로 객체만들기
+
+        var Human = function(name, hp, power){
+            this.name = name;
+            this.hp =hp;
+            this.power = power;
+            this.attack = function(target) {
+                console.log(this.name+"이 "+target.name+"을 공격했습니다.");
+               
+                target.hp -= this.power;
+
+                console.log(target.name+"의 hp가 "+target.hp+"만큼 남았습니다.")
+            };
+            this.show = function(){
+                console.log("[%s] %d", this.name, this.hp);
+                //"[%s] %d" 뭔지 검색해보기
+            };
+        };
+
+        var p1 = new Human('heekyung',100,10); // new 표기 필수
+        var p2 = new Human('crong',200,1);
+        var p3 = new Human('pobi',20,30);
+
+        p1.attack(p2); 
+        p1.show();
+        p2.show();
+        p3.show();
+        //p1 p2 p3 는 변수, 이 변수를 참조변수라고 부른다. human class 의 instance p1 이다. 라고 부른다.
+        //객체의 변수 = 참조 변수
+
+
+        //객체 하나만 만드는 것은 jason표기법으로 쓰기
+
+        // var heekyung = {
+        //     "name" :"류희경",
+        //     hp : 9999
+        // };
+
+        var Eat = function(name,energy){
+            this.name = name;
+            this.energy = energy;
+            this.feed = function(target){ //target 이 먹을 사람. 
+                console.log(target.name+"이 "+this.name+"을 먹어 "+this.energy+"을 회복했습니다.")
+                target.hp += this.energy;
+                console.log("현재 "+target.name+"의 에너지 양 : "+target.hp);
+            }
+        }
+
+
+        var food1 = new Eat("doughnut", 10);
+        food1.feed(p1);
+        //heekyung이 doughnut을 먹어 10을 회복했습니다.
+        //현재 heekyung의 에너지 양 : 110
+
+
+
+    </script>
+</body>
+</html>
