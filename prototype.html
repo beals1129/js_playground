@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //프로토타입 
+
+        var Human = function(name, atk){
+            this.name = name;
+            this.hp = 100;
+            this.pow = atk;
+            // this.attack = function(v){} >  이걸 prototype 으로 빼냄
+        }
+
+        Human.prototype.attack = function(target){
+             target.hp -= this.pow;
+             console.log(this.name+"이 "+target.name+"을 공격하여 "+ target.name+"의 hp가 "+target.hp+"이 되었습니다.")
+
+         }
+
+         var p1 = new Human("heekyung",10);
+         var p2 = new Human("you",10);
+         p1.attack(p2);
+
+         p1.item = ["sword","shield","potion"];
+         
+         var arr = [p1, p2];
+         arr[0].hp = 200;
+         console.log(arr[0].hp);
+
+         var p3 = new Human("pobi",99);
+
+         p1.friends = [p2, p3];
+
+         p3.friend = p1 ;
+
+         p1.friends[1].friend.friends[0] // you (p2)
+         //단계별로 객체를 지정하는 방법이 다양하다.
+
+
+
+
+    </script>
+</body>
+</html>
