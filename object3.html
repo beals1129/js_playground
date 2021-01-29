@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    //=> Call by Reference 
+
+
+     //일반변수는 함수내부에서 값을 바꿔도 외부는 바뀌지 않는다.
+     //참조변수는 내부에서 바뀌면 밖에서도 바뀐다.
+
+
+
+
+
+
+
+
+
+        //일반변수 
+        // 값이 복사되며 바꿀 수 있다.
+
+        var a = 10;
+        var a2 = a;
+
+        console.log(a2)
+        //일반변수는 값이 들어간다.
+
+        if (a === a2){
+            console.log('true')
+        } else {
+            console.log('false') 
+        } //true
+
+        a = 15;
+
+        if (a === a2){
+            console.log('true')
+        } else {
+            console.log('false') 
+        } // false
+
+
+        //일반변수 string
+
+        var s1 = "hello";
+
+        var s2 = s1;
+
+        if (a === a2){
+            console.log('true')
+        } else {
+            console.log('false') 
+        } //true
+
+        var s1 ="hell";
+
+        if (a === a2){
+            console.log('true')
+        } else {
+            console.log('false') 
+        } // false
+
+
+
+        //참조변수 
+        //한가지를 여러 이름으로 부르는 것 
+        //안의 변수가 변해도 그대로 같이 변한다.
+
+        var arr1 = [1, 2, 3, 4, 5];
+
+        var arr2 = arr1;
+
+        if (arr1 === arr2){
+            console.log('참조변수 true')
+        } else {
+            console.log('참조변수 false') 
+        } //true 
+
+
+        arr1.push(6);
+        // 안의 변수가 변해도 arr또한 같이 변한다.
+
+
+
+        if (arr1 === arr2){
+            console.log('참조변수 true')
+        } else {
+            console.log('참조변수 false') 
+        } //true
+
+
+        //객체 
+
+        var p1 = {};
+        var p2 = p1;
+
+
+        if (p1 === p2){
+            console.log('참조변수 객체 true')
+        } else {
+            console.log('참조변수 객체 false') 
+        } //true
+
+        p1.name= "heekyung";
+        // p1 과 p2 둘다 name 이 삽입됨. 
+
+        if (p1 === p2){
+            console.log('참조변수 객체 true')
+        } else {
+            console.log('참조변수 객체 false') 
+        } //true
+
+
+
+
+
+        //일반 변수 
+        //일반변수는 함수내부에서 값을 바꿔도 외부는 바뀌지 않는다.
+        var foo = function(v) {
+            v *= 2
+
+            console.log("foo " + v);
+
+        };
+
+        var n = 10;
+        foo(n);
+
+        n = 20;
+        foo(n);
+
+
+
+        //참조 변수 (객체)
+        p1.w = 50;
+        
+        var diet = function(people){
+            people.w -= 1;
+            console.log(people.name+"이 다이어트 하여 "+people.w+"kg이 되었습니다.")
+        }
+
+        diet(p1);
+        //p1 = people  
+
+
+     //배열
+     var arr = [ 1, 2, 3, 4, 5];
+     var append = function(arr, v) {
+         arr.push(v);
+         console.log(arr);
+     }
+
+     append(arr, 10);
+     // var arr = [1, 2, 3, 4, 5, 10] 이 될 것이다. 
+
+     console.log(arr);
+     //함수 안의 arr과 밖의 arr은 같다.
+
+
+
+     var arr3 = [];
+
+     append(arr3, 1);
+     append(arr3, 3);
+     append(arr3, 6);
+     append(arr3, 100);
+     // 이런식으로 추가가능 
+     console.log(arr3);
+     // arr3 = [1, 3, 6, 100]
+
+
+
+
+             //안에서 바뀐 값이 밖에서도 바뀌는 것
+    //=> Call by Reference 
+
+
+     //일반변수는 함수내부에서 값을 바꿔도 외부는 바뀌지 않는다.
+     //참조변수는 내부에서 바뀌면 밖에서도 바뀐다.
+
+
+    </script>
+</body>
+</html>
