@@ -31,3 +31,7 @@ btn1.onclick = function() {
     console.log(input.value);
 }
 //이런식으로 그냥 function 을 써서 가능하다. 
+
+// var btn2 = document.createElement('button');
+// btn2.onclick = readInput;
+// var test2 = document.getElementById('test')
