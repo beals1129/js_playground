@@ -14,19 +14,26 @@
 </style>
 <body>
     <h1> 계산기 제작 </h1>
-    <div id="calc_output">
+    <div>
         <div><h3>첫번째 수</h3><input type="number" id="n1"></div>
         <div><h3>두번째 수</h3><input type="number" id="n2"></div>
-        <button id="btn">계산</button>
+        <button onclick="main()">계산</button>
     </div>
+    <div id="calc_output"></div>
 
     <script>
         function main(){
             console.log("Calculator1");
             var out = document.getElementById('calc_output');
 
+            var n1_value = document.getElementById('n1').value;
+            var n2_value = document.getElementById('n2').value;
 
-            var str = "";
+            var n1 = Number(n1_value);
+            var n2 = Number(n2_value);
+
+
+            var str = "</br>";
             
             str +=  n1 + " + " + n2 + " = " +(n1 + n2) + "</br>"
             str +=  n1 + " - " + n2 + " = " +(n1 - n2) + "</br>" 
@@ -37,7 +44,7 @@
  
         }
 
-        // main();
+        main();
 
     
     </script>
