@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 계산기 제작 </h1>
+    <div id="calc_output"></div>
+
+    <script>
+        function main(){
+            console.log("Calculator1");
+            var out = document.getElementById('calc_output');
+           
+
+            var n1 = Number(prompt("첫번째 값을 입력해주세요"));
+            var n2 = Number(prompt("두번째 값을 입력해주세요"));
+
+            var str = "";
+            
+            str +=  n1 + " + " + n2 + " = " +(n1 + n2) + "</br>"
+            str +=  n1 + " - " + n2 + " = " +(n1 - n2) + "</br>" 
+            str +=  n1 + " * " + n2 + " = " +(n1 * n2) + "</br>" 
+            str +=  n1 + " / " + n2 + " = " +(n1 / n2) + "</br>" 
+
+            out.innerHTML = str
+           
+
+
+        }
+
+        main();
+
+    
+    </script>
+    
+</body>
+
+</html>
